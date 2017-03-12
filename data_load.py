@@ -15,8 +15,6 @@ try:
         for row in reader:
             cur.execute("INSERT INTO squad (kit_num, name, pos, dob, nat, apps, goals, assists, mins) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)", (row['kit_num'], row['name'], row['pos'], row['dob'], row['nat'], row['apps'], row['goals'], row['assists'], row['mins']))
 
-    cur.execute("SELECT * FROM squad;")
-    cur.fetchone()
     conn.commit()
     cur.close()
     conn.close()
