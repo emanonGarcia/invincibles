@@ -10,6 +10,7 @@ This is a python3 specific script. Download by visiting [Python](https://www.pyt
 $ pip install python3
 ```
 [Postgres](http://postgresapp.com/)
+
 [Postico](https://eggerapps.at/postico/)
 Update PATH Environment Variable
 ```
