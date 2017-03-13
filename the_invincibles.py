@@ -8,7 +8,6 @@ cur = conn.cursor()
 parser = argparse.ArgumentParser()
 parser.add_argument('-c', '--create', help='Create a new record', action='store_true')
 parser.add_argument('-r', '--read', help='Read the table', action='store_true')
-parser.add_argument('-u', '--update', help='Update an existing entry', action='store_true')
 
 args = parser.parse_args()
 
@@ -41,7 +40,6 @@ def create_player():
 
 
 def read_players():
-    # pos_list = ['gk', 'df', 'mf', 'fw']
     cur.execute("SELECT kit_num, name ,pos FROM squad ORDER BY kit_num;")
     for num, name, pos in cur:
         print("{}: {}, {}".format(num, name, pos))
@@ -65,12 +63,6 @@ def read_players():
                 exit()
         else:
             continue
-
-
-def update_player():
-    # Should my user be able to change the data?
-    cur.execute("UPDATE squad SET blank = 'blank' WHERE blank = 'blank'")
-
 
 def main():
 
