@@ -71,9 +71,7 @@ def main():
 
     elif args.read:
         read_players()
-
-    elif args.update:
-        update_player()
+        
     else:
         print("Try passing the -h/--help flag for instructions")
 
